@@ -1,0 +1,24 @@
+.textfield-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0 10px;
+  justify-content: left;
+  align-items: start;
+}
+
+.textfield-label {
+  width: 100%;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.textfield-field {
+  margin-bottom: 10px;
+  padding: 0 10px;
+  height: 40px;
+  width: 100%;
+  border: 1px solid #ccc !important;
+  border-radius: 4px;
+}
