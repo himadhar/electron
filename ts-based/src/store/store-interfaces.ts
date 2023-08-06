@@ -3,3 +3,7 @@ export interface CodeStructure {
   description: string;
   title: string;
 }
+
+export interface IListOfCodeSnippets {
+  listOfCodeSnippets: CodeStructure[];
+}

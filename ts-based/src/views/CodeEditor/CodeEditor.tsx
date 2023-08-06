@@ -9,7 +9,7 @@ import "prismjs/themes/prism.css"; //Example style, you can use another
 import TextField from "../../components/TextField/TextField";
 
 const CodeEditor = (props: CodeEditorProps) => {
-  const { code, description, title } = props;
+  const { code, description, title, onClickHandler } = props;
   const [renderCode, setRenderCode] = useState(`// Add your code here`);
   const [grammar, setGrammar] = useState("ts"); // can be used to set the language grammar while highlighting
   const [nameValue, setNameValue] = useState("");
@@ -49,6 +49,7 @@ const CodeEditor = (props: CodeEditorProps) => {
           highlight={(code) => highlight(code, languages.js, grammar)}
         />
       </div>
+      <button onClick={onClickHandler}>Save</button>
     </form>
   );
 };

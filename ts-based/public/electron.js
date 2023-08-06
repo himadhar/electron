@@ -1,5 +1,6 @@
 const path = require("path");
-
+const Store = require("electron-store");
+const { ipcMain } = require("electron");
 const { app, BrowserWindow } = require("electron");
 const isDev = require("electron-is-dev");
 
@@ -44,4 +45,23 @@ app.on("activate", () => {
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow();
   }
+});
+
+//defined the store
+let store = new Store();
+
+// ... rest of code here
+
+//added a listener at the end of file with a log to see what's happening
+console.log("store", store.get("test"));
+
+// IPC listener
+ipcMain.on("get", async (event, val) => {
+  event.returnValue = store.get(val);
+});
+ipcMain.on("set", async (event, key, val) => {
+  store.set(key, val);
+});
+ipcMain.on("delete", async (event, key, val) => {
+  store.delete(key);
 });
