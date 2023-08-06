@@ -2,21 +2,19 @@ import { useEffect, useState } from "react";
 import { ListOfCodesProps } from "./ListOfCodes-interfaces";
 import { CodeStructure } from "../../store/store-interfaces";
 import CodeEditor from "../CodeEditor/CodeEditor";
-import { getFromStore } from "../../store/store";
 
 const ListOfCodes = (props: ListOfCodesProps) => {
   const [codeSnippets, setCodeSnippets] = useState<CodeStructure[]>([]);
   const [selectedCodeSnippetIndex, setSelectedCodeSnippetIndex] = useState(-1);
 
   useEffect(() => {
-    setCodeSnippets(getFromStore("listOfCodeSnippets", []));
+    // setCodeSnippets(getFromStore("listOfCodeSnippets", []));
   }, []);
 
   const onSaveSnippetHandler = () => {}
 
   return (
     <div className="container">
-      asdfasd
       {selectedCodeSnippetIndex < 0 ? (
         <div className="code-snippets-container">
           {codeSnippets.map((snippet: CodeStructure, index: number) => (
