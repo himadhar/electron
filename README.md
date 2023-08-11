@@ -8,6 +8,8 @@
 
 The app is built using electron framework and react library for building the UI. The implementation uses Typescript as coding language and basic css stylings for design changes. I have used `electron-store` for handling storage needs.
 
+For syntax highlighting, I've used prismjs which is an amazing lightweight tool built just for this.
+
 The requirements was as below.
 
 > Design and implement a Code Snippet Manager application using Electron, React, and TypeScript. The application should provide the following features:
