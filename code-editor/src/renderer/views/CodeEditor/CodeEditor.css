@@ -1,0 +1,25 @@
+.code-editor-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.code-editor {
+  width: 100%;
+  min-height: 100px;
+  padding: 20px;
+  background-color: #f6f8fa;
+  font-family: 'Fira code', 'Fira Mono', monospace;
+  font-size: 1rem;
+}
+
+.buttons-container {
+  display: flex;
+  margin: 20px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-container .button {
+  margin: 0 10px;
+}
