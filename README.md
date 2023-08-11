@@ -24,8 +24,6 @@ The requirements was as below.
 > 3. Persistence and Storage:
 >    * Enable the application to persist code snippets using a local storage mechanism (e.g., Electron's built-in storage or a database of your choice).
 
----
-
 ### Scripts
 
 1. `npm run build` OR `yarn build` : Builds both `main` and `renderer` modules. `main` handles the core electron specific changes and `renderer` handles the UI part of the code.
